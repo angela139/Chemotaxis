@@ -26,7 +26,7 @@ int counter = 0;
  }   
  void draw()   
  {  
-   // blue ocean background
+   // b ocean background
    background(127, 205, 255);
    // small fish 
    for (int i = 0; i < fishie.length; i++){
@@ -67,17 +67,17 @@ int counter = 0;
  }  
  class Fish  
  {     
-   int red;
-   int blue;
-   int green;
+   int r;
+   int b;
+   int g;
    int x;
    int y;
    int fishsize;
    Fish(int fishs, int fishymin, int fishymax){
      // random color
-     red = (int)(Math.random()*155) + 100;
-     blue = (int)(Math.random()*155) + 100;
-     green = (int)(Math.random()*155) + 100;
+     r = (int)(Math.random()*155) + 100;
+     b = (int)(Math.random()*155) + 100;
+     g = (int)(Math.random()*155) + 100;
      // random x and y coordinates for fish
      x = (int)(Math.random()*200) + 100;
      y = (int)(Math.random()*(fishymax-fishymin)) + fishymin;
@@ -87,7 +87,7 @@ int counter = 0;
    
    void show(){
      // draws fish
-     fill(red, green, blue);
+     fill(r, g, b);
      noStroke();
      ellipse(x, y, fishsize, fishsize/3.5);
      triangle(x-fishsize/1.4,y+fishsize/7,x-fishsize/1.4,y-fishsize/7,x-fishsize/5,y);
